@@ -1,4 +1,4 @@
 *
 !.gitignore
-application-descriptor.xml
-wlclient.properties
+!application-descriptor.xml
+!wlclient.properties
