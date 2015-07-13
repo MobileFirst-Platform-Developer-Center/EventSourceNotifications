@@ -1,12 +1,15 @@
 IBM MobileFirst Platform Foundation
 ===
-### Sample Name
+### Event Source Notifications
 
 
 ### Usage
-Follow the instructions in the tutorials listed below.
+Follow the instructions in the tutorial(s) listed below.
 
 ### Tutorials
+**Push Notifications Overview**
+https://developer.ibm.com/mobilefirstplatform/documentation/getting-started-7-1/foundation/notifications/push-notifications-overview/
+
 
 
 ### Supported Levels
