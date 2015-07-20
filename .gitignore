@@ -56,3 +56,5 @@ derby.log
 # END mfp-gitignore rules
 #
 apps/HybridEventSource/android/native
+.jazzignore
+/pom.xml
