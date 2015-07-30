@@ -13,7 +13,9 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
---><!-- Attribute "id" must be identical to application folder name --><application xmlns="http://www.worklight.com/application-descriptor" id="HybridEventSource" platformVersion="7.1.0.00.20150604-0700">
+-->
+<!-- Attribute "id" must be identical to application folder name -->
+<application xmlns="http://www.worklight.com/application-descriptor" id="HybridEventSource" platformVersion="7.1.0.00.20150725-0007">
     <displayName>HybridEventSource</displayName>
     <description>HybridEventSource</description>
     <author>
@@ -25,9 +27,18 @@ limitations under the License.
     <mainFile>index.html</mainFile>
     <features/>
     <thumbnailImage>common/images/thumbnail.png</thumbnailImage>
+    <iphone bundleId="com.REPLACE-WITH-BUNDLE-ID" version="1.0">
+        <worklightSettings include="false"/>
+        <pushSender password="REPLACE-WITH-CERTIFICATE-PASSWORD" />
+        <security>
+            <encryptWebResources enabled="false"/>
+            <testWebResourcesChecksum enabled="false" ignoreFileExtensions="png, jpg, jpeg, gif, mp4, mp3"/>
+        </security>
+    </iphone>
+    <userIdentityRealms>PushAppRealm</userIdentityRealms>
     <android securityTest="PushSecurityTest" version="1.0">
         <worklightSettings include="false"/>
-        <pushSender key="API_KEY" senderId="PROJECT_NUMBER"/>
+        <pushSender key="REPLACE-WITH-API-KEY-VALUE" senderId="REPLACE-WITH-PROJECT-NUMBER"/>
         <security>
             <encryptWebResources enabled="false"/>
             <testWebResourcesChecksum enabled="false" ignoreFileExtensions="png, jpg, jpeg, gif, mp4, mp3"/>
@@ -35,5 +46,4 @@ limitations under the License.
             <packageName>Replace this text with the actual package name of the application, which is the value of the 'package' attribute in the 'manifest' element in AndroidManifest.xml file.</packageName>
         </security>
     </android>
-    <userIdentityRealms>PushAppRealm</userIdentityRealms>
 </application>

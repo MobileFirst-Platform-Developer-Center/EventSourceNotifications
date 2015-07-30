@@ -20,4 +20,8 @@ limitations under the License.
         <minification includes="**" level="none"/>
         <concatenation includes="**"/>
     </android>
+    <iphone>
+        <minification includes="**" level="none"/>
+        <concatenation includes="**"/>
+    </iphone>
 </buildSettings>

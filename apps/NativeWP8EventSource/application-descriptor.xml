@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!--
 Copyright 2015 IBM Corp.
 
@@ -25,5 +25,5 @@ limitations under the License.
      -->
     <targetCategory>UNDEFINED</targetCategory>		
 		
-    <pushSender />
+    <pushSender/>
 </nativeWindowsPhone8App>

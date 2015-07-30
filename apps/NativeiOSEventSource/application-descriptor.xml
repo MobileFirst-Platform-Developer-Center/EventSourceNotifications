@@ -19,5 +19,6 @@ limitations under the License.
 	<description>NativeiOSEventSource</description>
 	<accessTokenExpiration>3600</accessTokenExpiration>
 	<userIdentityRealms>PushAppRealm</userIdentityRealms>
+	<pushSender password="REPLACE-WITH-CERTIFICATE-PASSWORD" />
 
 </nativeIOSApp>
