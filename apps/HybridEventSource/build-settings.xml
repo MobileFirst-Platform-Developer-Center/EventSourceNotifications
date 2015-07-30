@@ -8,11 +8,13 @@
     FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND ANY WARRANTY OR CONDITION OF NON-INFRINGEMENT. IBM SHALL NOT BE LIABLE FOR ANY DIRECT,
     INDIRECT, INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR OPERATION OF THE SAMPLE SOURCE CODE.
     IBM HAS NO OBLIGATION TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS OR MODIFICATIONS TO THE SAMPLE SOURCE CODE.
- -->
-<buildSettings xmlns="http://www.ibm.worklight.com/build-settings" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-
-<android>
+ --><buildSettings xmlns="http://www.ibm.worklight.com/build-settings">
+    <android>
         <minification includes="**" level="none"/>
         <concatenation includes="**"/>
     </android>
+    <iphone>
+        <minification includes="**" level="none"/>
+        <concatenation includes="**"/>
+    </iphone>
 </buildSettings>

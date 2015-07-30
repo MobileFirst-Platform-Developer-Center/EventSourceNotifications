@@ -8,7 +8,7 @@
     FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND ANY WARRANTY OR CONDITION OF NON-INFRINGEMENT. IBM SHALL NOT BE LIABLE FOR ANY DIRECT,
     INDIRECT, INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR OPERATION OF THE SAMPLE SOURCE CODE.
     IBM HAS NO OBLIGATION TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS OR MODIFICATIONS TO THE SAMPLE SOURCE CODE.
- --><!-- Attribute "id" must be identical to application folder name --><application xmlns="http://www.worklight.com/application-descriptor" id="HybridEventSource" platformVersion="7.1.0.00.20150604-0700">
+ --><!-- Attribute "id" must be identical to application folder name --><application xmlns="http://www.worklight.com/application-descriptor" id="HybridEventSource" platformVersion="7.1.0.00.20150725-0007">
     <displayName>HybridEventSource</displayName>
     <description>HybridEventSource</description>
     <author>
@@ -20,9 +20,18 @@
     <mainFile>index.html</mainFile>
     <features/>
     <thumbnailImage>common/images/thumbnail.png</thumbnailImage>
+    <iphone bundleId="com.REPLACE-WITH-BUNDLE-ID" version="1.0">
+        <worklightSettings include="false"/>
+        <pushSender password="REPLACE-WITH-CERTIFICATE-PASSWORD" />
+        <security>
+            <encryptWebResources enabled="false"/>
+            <testWebResourcesChecksum enabled="false" ignoreFileExtensions="png, jpg, jpeg, gif, mp4, mp3"/>
+        </security>
+    </iphone>
+    <userIdentityRealms>PushAppRealm</userIdentityRealms>
     <android securityTest="PushSecurityTest" version="1.0">
         <worklightSettings include="false"/>
-        <pushSender key="API_KEY" senderId="PROJECT_NUMBER"/>
+        <pushSender key="REPLACE-WITH-API-KEY-VALUE" senderId="REPLACE-WITH-PROJECT-NUMBER"/>
         <security>
             <encryptWebResources enabled="false"/>
             <testWebResourcesChecksum enabled="false" ignoreFileExtensions="png, jpg, jpeg, gif, mp4, mp3"/>
@@ -30,5 +39,4 @@
             <packageName>Replace this text with the actual package name of the application, which is the value of the 'package' attribute in the 'manifest' element in AndroidManifest.xml file.</packageName>
         </security>
     </android>
-    <userIdentityRealms>PushAppRealm</userIdentityRealms>
 </application>
