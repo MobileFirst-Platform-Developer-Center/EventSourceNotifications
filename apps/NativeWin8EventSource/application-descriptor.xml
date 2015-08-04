@@ -13,9 +13,11 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
---><nativeWindows8App xmlns="http://www.worklight.com/native-windows8-descriptor" id="NativeWin8EventSource" platformVersion="7.1.0.00.20150604-0700" securityTest="PushSecurityTest" version="1.0">
+--><nativeWindows8App xmlns="http://www.worklight.com/native-windows8-descriptor" id="NativeWin8EventSource" platformVersion="7.1.0.00.20150803-1651" securityTest="PushSecurityTest" version="1.0">
 	
 	<displayName>NativeWin8EventSource</displayName>
 	<description>NativeWin8EventSource</description>
+
+	<pushSender clientSecret="WNS_CLIENT_SECRET" packageSID="WNS_PACKAGE_SID"/>
 		
 </nativeWindows8App>
