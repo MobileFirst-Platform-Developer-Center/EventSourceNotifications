@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
 Copyright 2015 IBM Corp.
 
@@ -14,7 +14,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
-<nativeWindowsPhone8App id="NativeWP8EventSource" platformVersion="7.1.0.00.20150620-0731"
+<nativeWindowsPhone8App id="NativeWP8EventSource" platformVersion="7.1.0.00.20150728-0630"
 	version="1.0" xmlns="http://www.worklight.com/native-windowsphone8-descriptor" securityTest="PushSecurityTest">
 	
 	<displayName>NativeWP8EventSource</displayName>
@@ -25,5 +25,5 @@ limitations under the License.
      -->
     <targetCategory>UNDEFINED</targetCategory>		
 		
-    <pushSender/>
+    <pushSender />
 </nativeWindowsPhone8App>
