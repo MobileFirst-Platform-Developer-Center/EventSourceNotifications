@@ -27,7 +27,7 @@ limitations under the License.
     <mainFile>index.html</mainFile>
     <features/>
     <thumbnailImage>common/images/thumbnail.png</thumbnailImage>
-    <iphone bundleId="com.REPLACE-WITH-BUNDLE-ID" version="1.0">
+    <iphone securityTest="PushSecurityTest" bundleId="com.REPLACE-WITH-BUNDLE-ID" version="1.0">
         <worklightSettings include="false"/>
         <pushSender password="REPLACE-WITH-CERTIFICATE-PASSWORD" />
         <security>
