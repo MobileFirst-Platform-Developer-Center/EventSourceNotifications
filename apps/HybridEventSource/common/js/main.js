@@ -42,6 +42,11 @@ function isPushSupported() {
 		isSupported = WL.Client.Push.isPushSupported();
 	}	
 	alert(isSupported);
+	WL.SimpleDialog.show("Push Notifications", JSON.stringify(isSupported), [ {
+	    text : 'Close',
+	    handler : function() {}
+	  }
+	  ]);
 }
 
 function isPushSubscribed() {
@@ -49,13 +54,22 @@ function isPushSubscribed() {
 	if (WL.Client.Push){
 		isSubscribed = WL.Client.Push.isSubscribed('myPush');
 	}
-	alert(isSubscribed);
+	WL.SimpleDialog.show("Push Notifications", JSON.stringify(isSubscribed), [ {
+	    text : 'Close',
+	    handler : function() {}
+	  }
+	  ]);
 }
 
 //---------------------------- Set up push notifications -------------------------------
 if (WL.Client.Push) {	
 	WL.Client.Push.onReadyToSubscribe = function() {
-		alert("onReadyToSubscribe");
+		
+		WL.SimpleDialog.show("Push Notifications", "onReadyToSubscribe", [ {
+		    text : 'Close',
+		    handler : function() {}
+		  }
+		  ]);
 		
 		$('#SubscribeButton').removeAttr('disabled');
 		$('#UnsubscribeButton').removeAttr('disabled');
@@ -77,11 +91,19 @@ function doSubscribe() {
 }
 
 function doSubscribeSuccess() {
-	alert("doSubscribeSuccess");
+	WL.SimpleDialog.show("Push Notifications", "doSubscribeSuccess", [ {
+	    text : 'Close',
+	    handler : function() {}
+	  }
+	  ]);
 }
 
 function doSubscribeFailure() {
-	alert("doSubscribeFailure");
+	WL.SimpleDialog.show("Push Notifications", "doSubscribeFailure", [ {
+	    text : 'Close',
+	    handler : function() {}
+	  }
+	  ]);
 }
 
 //------------------------------- Unsubscribe ---------------------------------------
@@ -93,16 +115,31 @@ function doUnsubscribe() {
 }
 
 function doUnsubscribeSuccess() {
-	alert("doUnsubscribeSuccess");
+	WL.SimpleDialog.show("Push Notifications", "doUnsubscribeSuccess", [ {
+	    text : 'Close',
+	    handler : function() {}
+	  }
+	  ]);
 }
 
 function doUnsubscribeFailure() {
-	alert("doUnsubscribeFailure");
+	WL.SimpleDialog.show("Push Notifications", "doUnsubscribeFailure", [ {
+	    text : 'Close',
+	    handler : function() {}
+	  }
+	  ]);
 }
 
 //------------------------------- Handle received notification ---------------------------------------
 function pushNotificationReceived(props, payload) {
-	alert("pushNotificationReceived invoked");
-	alert("props :: " + JSON.stringify(props));
-	alert("payload :: " + JSON.stringify(payload));
+	
+	WL.SimpleDialog.show("Push Notifications", "Provider notification data: " + JSON.stringify(props), [ {
+	    text : 'Close',
+	    handler : function() {
+	    	WL.SimpleDialog.show("Push Notifications", "Application notification data: " + JSON.stringify(payload), [ {
+	    	    text : 'Close',
+	    	    handler : function() {}
+	    	  }]);    	
+	    }
+	}]);
 }

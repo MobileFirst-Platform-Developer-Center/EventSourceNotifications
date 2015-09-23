@@ -41,8 +41,16 @@ function submitNotification(userId, notificationText){
 	}
 
 	var badgeDigit = 1;
+
+	var notification={};
+	notification.MPNS={};
 	
-	var notification = WL.Server.createDefaultNotification(notificationText, badgeDigit, {custom:"data"});
+	notification = WL.Server.createDefaultNotification(notificationText, badgeDigit, {custom:"data"});
+
+	//Set Toast notification for MPNS
+	notification.MPNS.toast={};
+	notification.MPNS.toast.text1 = "Toast title";
+	notification.MPNS.toast.text2 = "Toast content";
 	
 	WL.Logger.debug("submitNotification >> userId :: " + userId + ", text :: " + notificationText);
 	
