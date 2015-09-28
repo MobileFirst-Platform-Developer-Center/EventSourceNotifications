@@ -53,7 +53,7 @@ limitations under the License.
     <windows8 version="1.0">
         <description>windows8 is the identifier Windows 8 Universal desktop/tablet Universal app.  Use the Package family name from the package.appxmanifest file as the value for the packageName tag</description>
         <uuid>7208a078-c6c7-46a5-b713-9a6de9206a24</uuid>
-        <pushSender appIdentityName="" appIdentityPublisher="" clientSecret="" packageSID=""/>
+        <pushSender appIdentityName="APP_IDENTITY_NAME" appIdentityPublisher="APP_IDENTITY_PUBLISHER" clientSecret="CLIENT_SECRET" packageSID="PACKAGE_SID"/>
     </windows8>
     <windowsphoneuniversal version="1.0">
         <description>windowsphoneuniversal is the identifier for Windows Phone Universal.  Use the Package family name from the package.appxmanifest file as the value for the packageName tag</description>
